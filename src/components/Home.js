@@ -1,10 +1,12 @@
 import React from 'react';
+import Section from './Section';
+import { Container } from './styles/Container';
 
 const Home = () => {
     return (
-        <div>
-            <div>Home</div>
-        </div>
+        <Container>
+            <Section />
+        </Container>
     );
 }
 

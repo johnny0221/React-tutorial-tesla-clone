@@ -9,7 +9,7 @@ function App() {
     <div>
       <GlobalStyled />
       <div className="App">
-          <Header />
+          {/* <Header /> */}
           <Home />
       </div>
     </div>
