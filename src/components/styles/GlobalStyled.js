@@ -16,6 +16,10 @@ export const GlobalStyled = createGlobalStyle`
         width: 100%;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     @keyframes animationDown {
         0%, 20%, 50%, 80%, 100% {
             transform: translateY(0);
