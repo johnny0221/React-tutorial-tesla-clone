@@ -6,10 +6,14 @@ import { CustomMenu } from './styles/CustomMenu';
 import { BurgerNav } from './styles/BurgerNav';
 import { CustomClose } from './styles/CustomClose';
 import { Flex } from './styles/Flex';
+import { selectCars } from '../features/car/carSlice';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
 
     const [burgerState, setBurgerState] = useState(false);
+    const cars = useSelector(selectCars);
+    console.log(cars);
 
     return (
         <HeaderContainer>
@@ -17,10 +21,7 @@ const Header = () => {
                 <img src="/images/logo.svg" />
             </a>
             <Menu>
-                <a href="#">Model S</a>
-                <a href="#">Model 3</a>
-                <a href="#">Model X</a>
-                <a href="#">Model Y</a>
+                { cars && cars.map((car, i) => <a href="#" key={i}>{car}</a> )}
             </Menu>
             <RightMenu>
                 <a href="#">Shop</a>
